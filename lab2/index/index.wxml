@@ -1,0 +1,36 @@
+<view class= 'container'>
+  <!--zone1:zone selecter-->
+    <picker mode='region' bindchange='changeRegion'>
+      <view style="position: relative; left: 0rpx; top: -125rpx">{{region}}</view>
+    </picker>
+    <!--zone2:text zone-->
+    <text style="width: 156rpx; height: 83rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: -61rpx">{{now.temp}}°C {{now.text}}</text>
+    <!--zone3:pictures zone-->
+    <image src='../images/{{now.icon}}.svg' style="position: relative; left: -1rpx; top: -41rpx"></image>
+    <view class= 'detail'>
+      <view class=  'bar' style="width: 635rpx; display: flex; box-sizing: border-box; position: relative; left: 59rpx; top: 1rpx">
+        <view class ='box'>湿度</view>
+        <view class ='box'>气压</view>
+        <view class ='box'>能见度</view>
+      </view>
+
+      <view class=  'bar' style="position: relative; left: 376rpx; top: -159rpx; width: 518rpx; display: flex; box-sizing: border-box">
+        <view class ='box'>{{now.humidity}}%</view>
+        <view class ='box'>{{now.pressure}}0hpa</view>
+        <view class ='box'>{{now.vis}}0km</view>
+      </view>
+
+      <view class=  'bar' style="position: relative; left: 58rpx; top: -140rpx">
+        <view class ='box'>风向</view>
+        <view class ='box'>风速</view>
+        <view class ='box'>风力</view>
+      </view>
+
+      <view class=  'bar' style="position: relative; left: 376rpx; top: -298rpx; width: 518rpx; display: flex; box-sizing: border-box">
+        <view class ='box'>{{now.windDir}}</view>
+        <view class ='box'>{{now.windSpeed}}km/h</view>
+        <view class ='box'>{{now.windScale}}级</view>
+      </view>
+
+    </view>
+</view>
